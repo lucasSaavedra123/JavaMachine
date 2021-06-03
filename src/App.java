@@ -41,21 +41,21 @@ public class App {
     public static void main(String[] args) throws Exception{
         TuringMachine pustilnikMachine = buildPustilnikMachine();
 
-        pustilnikMachine.changeStrip(new Strip("000001000B",0));
+        pustilnikMachine.changeStrip(new Strip("000001000B"));
         pustilnikMachine.run();
         System.out.println("5-3: " + pustilnikMachine.result());
 
         pustilnikMachine.restart();
-        pustilnikMachine.changeStrip(new Strip("00001000B",0));
+        pustilnikMachine.changeStrip(new Strip("00001000B"));
         System.out.println("4-3: " + pustilnikMachine.result());
 
         pustilnikMachine.restart();
-        pustilnikMachine.changeStrip(new Strip("000000000010000B",0));
+        pustilnikMachine.changeStrip(new Strip("000000000010000B"));
         pustilnikMachine.run();
         System.out.println("10-4: " + pustilnikMachine.result());
 
         pustilnikMachine.restart();
-        pustilnikMachine.changeStrip(new Strip("010000B",0));
+        pustilnikMachine.changeStrip(new Strip("010000B"));
         pustilnikMachine.run();
         System.out.println("1-4: " + pustilnikMachine.result());
 

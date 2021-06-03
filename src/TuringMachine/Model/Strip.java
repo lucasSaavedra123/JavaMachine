@@ -23,14 +23,21 @@ public class Strip {
     }
 
     public Strip(String symbols, int initialPosition) {
+        this.symbols = stringToArrayOfSymbols(symbols);
+        this.currentPosition = initialPosition;
+    }
 
+    private Symbol[] stringToArrayOfSymbols(String symbols) {
         Symbol[] symbolsAsArray = new Symbol[symbols.length()];
 
         for (int index = 0 ; index<symbols.length() ; index++)
             symbolsAsArray[index] = new Symbol(Character.toString(symbols.charAt(index)));
+        return symbolsAsArray;
+    }
 
-        this.symbols = symbolsAsArray;
-        this.currentPosition = initialPosition;
+    public Strip(String symbols) {
+        this.symbols = stringToArrayOfSymbols(symbols);
+        this.currentPosition = 0;
     }
 
     @Override
@@ -46,7 +53,6 @@ public class Strip {
         else{
             for(int i = 0 ; i<symbolsAsString.length() && Character.toString(symbolsAsString.charAt(i)).equals(Symbol.blankString()) ; i++) firstIndex++;
             for(int i = this.length()-1 ; i>=0 && Character.toString(symbolsAsString.charAt(i)).equals(Symbol.blankString()) ; i--) lastIndex--;
-
             string = limits + Symbol.blankString() + symbolsAsString.substring(firstIndex, lastIndex+1)  + Symbol.blankString() + limits;
 
         }
