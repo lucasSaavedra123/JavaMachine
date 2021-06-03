@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Lucas Ariel Saavedra\\Desktop\\junit-4.13.2.jar",
+        "c:\\Users\\Lucas Ariel Saavedra\\Desktop\\hamcrest-core-1.3.jar",
+        "c:\\Users\\Lucas Ariel Saavedra\\turingMachine\\hamcrest-core-1.3.jar",
+        "c:\\Users\\Lucas Ariel Saavedra\\turingMachine\\junit-4.13.2.jar"
+    ]
+}
