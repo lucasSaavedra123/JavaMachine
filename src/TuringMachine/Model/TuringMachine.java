@@ -41,4 +41,17 @@ public class TuringMachine {
         this.strip = newStrip;
     }
 
+    public void runWithDebug() {
+        while(currentState.hasTransitionFor(strip.read())){
+            printCurrentStateAndStrip();
+            this.step();
+        }
+
+        printCurrentStateAndStrip();
+    }
+
+    private void printCurrentStateAndStrip() {
+        System.out.println(currentState.toString()+"->"+strip.toString());
+    }
+
 }

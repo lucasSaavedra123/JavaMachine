@@ -47,6 +47,7 @@ public class App {
 
         pustilnikMachine.restart();
         pustilnikMachine.changeStrip(new Strip("00001000B"));
+        pustilnikMachine.run();
         System.out.println("4-3: " + pustilnikMachine.result());
 
         pustilnikMachine.restart();
@@ -58,6 +59,11 @@ public class App {
         pustilnikMachine.changeStrip(new Strip("010000B"));
         pustilnikMachine.run();
         System.out.println("1-4: " + pustilnikMachine.result());
+
+        pustilnikMachine.restart();
+        pustilnikMachine.changeStrip(new Strip("0001000B"));
+        pustilnikMachine.run();
+        System.out.println("3-3: " + pustilnikMachine.result());
 
     }
 }
